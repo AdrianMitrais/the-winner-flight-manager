@@ -1,7 +1,10 @@
 package org.thewinner.commands;
 
-import org.springframework.shell.standard.ShellComponent;
-
-@ShellComponent
-public class AdminCommands {
+public interface AdminCommands {
+    String aircraftRegistration();
+    String routesRegistration();
+    String destinationRegistration();
+    String runBookingService();
+    String runFlight();
+    String nextDay();
 }
