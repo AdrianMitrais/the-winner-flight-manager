@@ -1,33 +1,27 @@
 package org.thewinner.commands;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.shell.standard.ShellComponent;
-import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
-import org.thewinner.services.starters.LoginService;
 
-@ShellComponent
-public class UserSelectCommands {
+/**
+ * The interface User select commands.
+ */
+public interface UserSelectCommands {
+    /**
+     * Function to set role of user
+     *
+     * @param user who to login as
+     */
+    void login(@ShellOption(defaultValue = "no-user") String user);
 
-    @Autowired
-    LoginService loginService;
+    /**
+     * Function to log user out of roles
+     */
+    void logout();
 
-    @ShellMethod(value = "Choose a user to login as", key = "login")
-    public void login(@ShellOption(defaultValue = "no-user") String user) {
-        loginService.login(user);
-    }
-
-    @ShellMethod(value = "Log out of the application", key = "logout")
-    public void logout() {
-        loginService.logout();
-    }
-
-    @ShellMethod(value = "Log out of the application", key = "check-user")
-    public String checkUser() {
-        return loginService.checkCurrentUser();
-    }
-
-
-
+    /**
+     * Check current user roles
+     *
+     * @return currently used roles
+     */
+    String checkUser();
 }

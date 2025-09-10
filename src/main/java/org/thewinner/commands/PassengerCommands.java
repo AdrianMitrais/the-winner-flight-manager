@@ -1,7 +1,5 @@
 package org.thewinner.commands;
 
-import org.springframework.shell.standard.ShellComponent;
+public interface PassengerCommands {
 
-@ShellComponent
-public class PassengerCommands {
 }
