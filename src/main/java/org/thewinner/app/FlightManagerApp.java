@@ -3,6 +3,7 @@ package org.thewinner.app;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.thewinner.app.menus.LoginOperation;
+import org.thewinner.app.sessions.AppSession;
 
 @Component
 public class FlightManagerApp {
@@ -13,9 +14,9 @@ public class FlightManagerApp {
     private boolean appStarted = false;
 
     public void start() {
-        preload();
+        AppSession appSession = new AppSession();
         while(appStarted) {
-            loginOperation.showMenu();
+            loginOperation.showMenu(appSession.getScanner());
         }
 
     }
