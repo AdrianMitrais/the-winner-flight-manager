@@ -1,11 +1,7 @@
 package org.thewinner.app.menus;
 
 public interface AdminMenuOperation {
+    void navigateMenu();
     String showMenu();
-    String registerAircraft();
-    String registerRoutes();
-    String registerDestination();
-    String runBookingService();
-    String runFlights();
-    String nextDay();
 }
+

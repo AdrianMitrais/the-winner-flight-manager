@@ -10,7 +10,17 @@ public class FlightManagerApp {
     @Autowired
     LoginOperation loginOperation;
 
-    private void start() {
-        loginOperation.showMenu();
+    private boolean appStarted = false;
+
+    public void start() {
+        preload();
+        while(appStarted) {
+            loginOperation.showMenu();
+        }
+
+    }
+
+    public void preload() {
+        this.appStarted = true;
     }
 }
