@@ -2,7 +2,6 @@ package org.thewinner.app.menus.impl;
 
 import org.springframework.stereotype.Component;
 import org.thewinner.app.menus.AdminMenuOperation;
-import org.thewinner.app.sessions.AdminSession;
 
 import java.util.Scanner;
 
@@ -16,7 +15,7 @@ public class AdminMenuOperationImpl implements AdminMenuOperation {
     }
 
     @Override
-    public void showMenu(AdminSession adminSession, Scanner scanner) {
+    public void showMenu(Scanner scanner) {
         System.out.println("""
                 1. Register Aircraft \n
                 2. Register Routes \n

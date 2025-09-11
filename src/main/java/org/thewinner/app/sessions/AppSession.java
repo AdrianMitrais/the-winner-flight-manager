@@ -11,8 +11,6 @@ public class AppSession {
     private boolean appStarted;
     private String currentDay;
     private boolean isBookingServiceOpen;
-    private AdminSession adminSession;
-    private PassengerSession passengerSession;
     private Scanner scanner;
 
     public AppSession() {
