@@ -38,8 +38,17 @@ public class FlightManagerApp {
         menuOperation.showMenu(appSession.getScanner());
     }
 
+    public void logout() {
+        this.menuOperation = new LoginOperationImpl(this);
+        menuOperation.showMenu(appSession.getScanner());
+    }
+
     public void stopApp() {
         appSession.setAppStarted(false);
         appSession.getScanner().close();
+    }
+
+    public AppSession getSession() {
+        return appSession;
     }
 }

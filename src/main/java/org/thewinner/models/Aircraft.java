@@ -15,7 +15,7 @@ public class Aircraft {
     @Column(name = "aircraftId")
     private String aircraftId;
     @Column(name = "capacity")
-    private String capacity;
+    private int capacity;
 
     private String aircraftConfirmation() {
         return "New Aircraft Registered: " + this.aircraftId;

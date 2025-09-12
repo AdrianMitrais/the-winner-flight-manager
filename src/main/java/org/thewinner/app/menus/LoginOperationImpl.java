@@ -25,36 +25,13 @@ public class LoginOperationImpl extends MenuOperation {
     @Override
     public void showMenu(Scanner scanner) {
         System.out.println("""
-                Login As: \n
-                1. Admin \n
-                2. Passenger \n
-                3. Exit \n
-                Enter Option: \n
+                Login As:
+                1. Admin
+                2. Passenger
+                3. Exit
+                Enter Option:
                 """);
         int option = scanner.nextInt();
         navigateMenu(option);
     }
-
-//    public LoginOperationImpl(FlightManagerApp flightManagerApp) {
-//        super(flightManagerApp);
-//    }
-//
-//    @Autowired
-//
-//
-//    @Override
-//    protected void navigateMenu(int option) {
-//
-//    }
-//
-//    @Override
-//    public void showMenu(Scanner scanner) {
-//
-//    }
-//
-//    @Override
-//    protected void navigateMenu() {
-//
-//    }
-//}
 }
