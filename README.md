@@ -11,6 +11,6 @@ This project is to simulate flight system of an airline.
 5. Run application
 
 ## Documentation ##
-Will be published soon :)
+https://mitrais.gitbook.io/untitled/
 
 ### Created by The Winner ###
