@@ -1,13 +1,17 @@
-package org.thewinner.app.menus.impl;
+package org.thewinner.app.menus;
 
 import org.springframework.stereotype.Component;
-import org.thewinner.app.menus.AdminMenuOperation;
+import org.thewinner.app.FlightManagerApp;
 
 import java.util.Scanner;
 
 @Component
-public class AdminMenuOperationImpl implements AdminMenuOperation {
+public class AdminMenuOperationImpl extends MenuOperation {
 
+
+    public AdminMenuOperationImpl(FlightManagerApp flightManagerApp) {
+        super(flightManagerApp);
+    }
 
     @Override
     public void navigateMenu(int option) {
@@ -25,6 +29,7 @@ public class AdminMenuOperationImpl implements AdminMenuOperation {
                 6. Next Day \n
                 Enter Option:
                 """);
-
+        int option = scanner.nextInt();
+        navigateMenu(option);
     }
 }

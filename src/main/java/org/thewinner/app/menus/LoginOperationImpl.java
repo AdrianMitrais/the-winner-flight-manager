@@ -1,20 +1,17 @@
-package org.thewinner.app.menus.impl;
+package org.thewinner.app.menus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.thewinner.app.FlightManagerApp;
-import org.thewinner.app.menus.AdminMenuOperation;
-import org.thewinner.app.menus.LoginOperation;
-import org.thewinner.app.menus.PassengerMenuOperation;
-import org.thewinner.app.sessions.AdminSession;
 
 import java.util.Scanner;
 
 @Component
-public class LoginOperationImpl implements LoginOperation {
+public class LoginOperationImpl extends MenuOperation {
 
-    @Autowired
-    FlightManagerApp flightManagerApp;
+    public LoginOperationImpl(FlightManagerApp flightManagerApp) {
+        super(flightManagerApp);
+    }
 
     @Override
     public void navigateMenu(int option) {
@@ -31,9 +28,33 @@ public class LoginOperationImpl implements LoginOperation {
                 Login As: \n
                 1. Admin \n
                 2. Passenger \n
+                3. Exit \n
                 Enter Option: \n
                 """);
         int option = scanner.nextInt();
         navigateMenu(option);
     }
+
+//    public LoginOperationImpl(FlightManagerApp flightManagerApp) {
+//        super(flightManagerApp);
+//    }
+//
+//    @Autowired
+//
+//
+//    @Override
+//    protected void navigateMenu(int option) {
+//
+//    }
+//
+//    @Override
+//    public void showMenu(Scanner scanner) {
+//
+//    }
+//
+//    @Override
+//    protected void navigateMenu() {
+//
+//    }
+//}
 }
