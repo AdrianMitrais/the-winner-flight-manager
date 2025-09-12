@@ -7,18 +7,13 @@ import java.util.UUID;
 
 @Entity
 @Data
-public class Booking {
-
+public class Destination {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
     private UUID id;
-    @Column(name = "aircraftId")
-    private String aircraftId;
-    @Column(name = "capacity")
-    private String capacity;
-
-    public String bookingConfirmation() {
-        return "";
-    }
+    @Column(name = "destinationId")
+    private String destinationId;
+    @Column(name = "name")
+    private String name;
 }
